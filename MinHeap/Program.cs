@@ -13,7 +13,7 @@ namespace MinHeap
             Random randNumGen = new Random();
             Tree tree = new Tree();
 
-            for(int i = 0; i < 10; i++)
+            for(int i = 0; i < 25; i++)
             {
                 int nextNum = randNumGen.Next(0, 100);
                 tree.insert(nextNum);
@@ -23,6 +23,14 @@ namespace MinHeap
 
             Console.WriteLine("-------------------------------------------");
             tree.printTree();
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine("-------------------------------------------");
+                Console.WriteLine("Removing: " + tree.extractMin().getValue());
+                Console.WriteLine("-------------------------------------------");
+                tree.printTree();
+            }
+
             Console.ReadLine();
         }
     }
